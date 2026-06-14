@@ -29,7 +29,7 @@ Query: index=suspicious\
 \
 Or\
 \
-source="suspicious_connections.log" host="MacBookPro" index="suspicious" sourcetype="suspicious_activity"\
+source="suspicious_connections.log" host="MacBookPro" index="suspicious" sourcetype="suspicious_activity"
 
 . Was the suspicious activity dataset successfully ingested into Splunk?\
 Yes
@@ -43,11 +43,11 @@ Query:
 index=suspicious\
 \| stats count
 
-. How many suspicious activity events were ingested?\
+. How many suspicious activity events were ingested?
 
 The suspicious activity dataset was successfully ingested into Splunk. The dataset contains **1 event**, which includes **15 lines of network artifacts and connection information** extracted from packet-capture analysis.
 
-. How many network artifacts are available for investigation?\
+. How many network artifacts are available for investigation?
 
 Although Splunk reports 1 event, the event contains 15 individual network artifacts, including hostnames, device names, router-related activity, multicast traffic, and external cloud-hosted systems. These artifacts provide multiple investigation points for threat-hunting and network analysis.
 
@@ -62,14 +62,14 @@ index=suspicious\
 
 . What network artifacts are present in the dataset?
 
-**g3100.mynetworksettings.com\
+g3100.mynetworksettings.com\
 ec2-3-221-141-237.compute-1.amazonaws.com\
 igmp.mcast.net\
 all-systems.mcast.net\
 macbookpro\
 iphone\
 Reply is-at\
-Request records\
+Request records
 
 These artifacts represent router communications, cloud-hosted infrastructure, multicast activity, local devices, and network discovery traffic.
 \
@@ -149,11 +149,11 @@ The investigation identified router-related communications (g3100.mynetworksetti
 
 Please refer to image # 10 in the repository.
  
-Identifying Multicast Activity**
+**Identifying Multicast Activity**
 
 Query: index=suspicious mcast
 
-. Was multicast traffic observed in the environment?\
+. Was multicast traffic observed in the environment?
 
 Yes. The investigation identified multicast-related traffic within the dataset through the following entries:
 
@@ -181,11 +181,11 @@ index=suspicious
 
 . How many suspicious activity artifacts are currently being monitored?
 
-The visualization shows **1 suspicious activity event** currently being monitored. There are 15 Network Artifacts**\
+The visualization shows 1 suspicious activity event currently being monitored. There are 15 Network Artifacts.
 \
 . What is the total volume of suspicious activity records?
 
-The dataset contains **1 ingested event**. Examination of the event reveals multiple network artifacts, including local devices, router-related activity, multicast services, and an external cloud-hosted system. 15 Network Artifacts.
+The dataset contains 1 ingested event. Examination of the event reveals multiple network artifacts, including local devices, router-related activity, multicast services, and an external cloud-hosted system. 15 Network Artifacts.
 
 Please refer to images # 12 and 13 in the repository.
 
@@ -211,7 +211,7 @@ g3100.mynetworksettings.com\
 igmp.mcast.net\
 all-systems.mcast.net\
 macbookpro\
-iphone\
+iphone
 
 Analyst Assessment
 
